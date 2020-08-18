@@ -1,7 +1,11 @@
+import io.reactivex.subjects.BehaviorSubject
+
 fun exampleOf(description: String, action: () -> Unit) {
   println("\n--- Example of: $description ---")
   action()
 }
+
+class Student(val score: BehaviorSubject<Int>)
 
 fun String.romanNumeralIntValue(): Int {
   return when (this) {
